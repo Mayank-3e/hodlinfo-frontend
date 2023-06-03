@@ -1,0 +1,53 @@
+$phone-width: 500px;
+
+.container
+{
+  width: fit-content;
+  margin: auto;
+  @media(max-width: 1000px)
+  {
+    width: 100vw;
+    padding-left: 20px;
+    overflow-x: scroll;
+  }
+}
+
+.table
+{
+  thead
+  {
+    display: block;
+    margin-bottom: 15px;
+  }
+  tbody
+  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    tr
+    {
+      background: rgba(128, 128, 128, 0.1);
+      height: 50px;
+      border-radius: 5px;
+    }
+  }
+  tr
+  {
+    display: grid;
+    grid-template-columns: repeat(7,150px);
+  }
+  th
+  {
+    justify-self: center;
+    font-weight: 500;
+    font-size: 20px;
+    color: grey;
+  }
+  td
+  {
+    justify-self: center;
+    align-self: center;
+    font-weight: 500;
+    font-size: 15px;
+  }
+}
