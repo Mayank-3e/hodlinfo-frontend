@@ -23,10 +23,10 @@ export default function Home()
   },[])
 
   if(loading) return <Loader/>
-  if(!data) return <Alert>No data! Please retry.</Alert>
+  if(!data) return <Alert dismissible>There is some error in fetching data! Please retry.</Alert>
 
   return <>
-    {data.err && <Alert>{data.err}</Alert>}
+    {data?.err && <Alert>{data.err}</Alert>}
     <Navbar setData={setData} setLoading={setLoading}/>
     <Table data={data?.data}/>
     <Footer/>
